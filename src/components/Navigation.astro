@@ -1,0 +1,149 @@
+<div class="menu_img">
+  <a href="/">
+    <img class="index_img" src="/soundwheel.webp" alt="logoheader" />
+  </a>
+
+  <nav class="nav">
+    <ul class="menu">
+      <li><a href="/AO">Kampagne 1</a></li>
+      <li><a href="/spendingKills">Kampgagne 2</a></li>
+      <li><a href="/om_os">om os</a></li>
+    </ul>
+    <div class="burger">
+      <div class="line"></div>
+      <div class="line"></div>
+      <div class="line"></div>
+    </div>
+  </nav>
+</div>
+<style>
+  .index_img {
+    width: 13%;
+  }
+
+  .menu_img {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+  }
+  .menu {
+    display: none;
+    list-style: none;
+  }
+
+  .burger {
+    display: block;
+    width: 40px;
+    height: 20px;
+    cursor: pointer;
+    z-index: 10;
+    margin-right: 20px;
+  }
+
+  .burger .line {
+    width: 100%;
+    height: 3px;
+    background-color: #000000;
+    margin-bottom: 5px;
+    transition: 0.2s linear;
+  }
+
+  .burger.active .line:nth-child(1) {
+    transform: rotate(45deg) translate(5px, 5px);
+    transition: 0.3s linear;
+  }
+
+  .burger.active .line:nth-child(2) {
+    opacity: 0;
+    transition: 0.15s linear;
+  }
+
+  .burger.active .line:nth-child(3) {
+    transform: rotate(-45deg) translate(5px, -5px);
+    transition: 0.3s linear;
+  }
+
+  nav.active .menu {
+    display: block;
+    background-color: #384222;
+    position: absolute;
+    top: 80px;
+    width: 70%;
+    border-radius: 20px;
+    left: 50px;
+    box-shadow: 0 10px 10px rgba(255, 254, 254, 0.1);
+    z-index: 1;
+  }
+
+  nav.active .menu li {
+    margin: 10px 70px;
+  }
+
+  nav.active .menu a {
+    color: #f6f5f3;
+    text-decoration: none;
+    font-size: 1.3rem;
+  }
+
+  @media screen and (min-width: 800px) {
+    nav {
+      display: flex;
+      justify-content: right;
+    }
+
+    .menu {
+      display: flex;
+      list-style: none;
+      margin: 0;
+      padding: 0;
+      gap: 50px;
+    }
+
+    .menu li {
+      margin: 0 30px;
+    }
+
+    .menu a {
+      font-size: 1.2rem;
+      display: block;
+      text-align: center;
+      padding: 7px 0;
+      color: #000000;
+      text-decoration: none;
+      transition:
+        color 0.3s,
+        background-color 0.3s;
+    }
+
+    .menu a:hover {
+      scale: 1.2;
+      text-decoration: underline;
+    }
+
+    .burger {
+      display: none;
+    }
+  }
+</style>
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const burger = document.querySelector(".burger");
+    const nav = document.querySelector("nav");
+    const menu = document.querySelector(".menu");
+
+    if (!burger || !nav || !menu) return;
+
+    burger.addEventListener("click", () => {
+      burger.classList.toggle("active");
+      nav.classList.toggle("active");
+    });
+
+    menu.addEventListener("click", (e) => {
+      if (e.target instanceof HTMLElement && e.target.tagName === "A") {
+        burger.classList.remove("active");
+        nav.classList.remove("active");
+      }
+    });
+  });
+</script>
