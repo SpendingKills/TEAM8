@@ -67,6 +67,13 @@ p {
   margin-top: 30px;
 }
 
+.grid_3-5 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  padding: 0 20px;
+}
+
 @media (min-width: 750px) {
   h1 {
     font-family: "Raleway", sans-serif;
@@ -92,11 +99,11 @@ p {
   }
 
   .grid_3-5 {
-    display: grid;
-    grid-template-columns: 5fr 7fr;
-    gap: 0;
-    margin-left: 120px;
-    margin-right: 120px;
+    grid-template-columns: minmax(320px, 1fr) minmax(0, 1.4fr); /*VI SKAL HUSKE DETTE FOR AT GØRE DET RESPONSIVT*/
+    max-width: 1200px;
+    margin: 0 auto;
+    align-items: center;
+    gap: clamp(24px, 4vw, 56px); /*Afstand der vokser med skærmbredde, også HUSK*/
   }
   .SK_billede2 {
     width: 100%;
