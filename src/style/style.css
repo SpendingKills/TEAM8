@@ -9,6 +9,7 @@ img {
   width: 100%;
   height: auto;
   display: block;
+  border-radius: 30px;
 }
 
 h1 {
@@ -19,8 +20,8 @@ h1 {
 
 h2 {
   font-family: "Raleway", sans-serif;
-  font-size: 20px;
-  font-weight: 800;
+  font-size: 23px;
+  font-weight: 400;
 }
 h3 {
   font-family: "Raleway", sans-serif;
@@ -32,6 +33,30 @@ h4 {
   font-family: "Raleway", sans-serif;
   font-size: 25px;
   font-weight: 700;
+}
+
+p {
+  font-family: "Raleway", sans-serif;
+  max-width: 50ch;
+  margin: 0 auto;
+}
+
+.yellow {
+  background-color: #ffd998;
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.SK_billede1 {
+  width: 88%;
+  margin: 0 auto;
+  margin-top: 20px;
+}
+
+.SK_intro {
+  margin-left: 30px;
+  margin-bottom: 20px;
+  margin-top: 30px;
 }
 
 @media (min-width: 750px) {
