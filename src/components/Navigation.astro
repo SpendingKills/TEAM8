@@ -1,12 +1,8 @@
-<div class="menu_img">
-  <a href="/">
-    <img class="index_img" src="/soundwheel.webp" alt="logoheader" />
-  </a>
-
+<div>
   <nav class="nav">
     <ul class="menu">
       <li><a href="/AO">Kampagne 1</a></li>
-      <li><a href="/spendingKills">Kampgagne 2</a></li>
+      <li><a href="/spendingKills">Kampagne 2</a></li>
       <li><a href="/om_os">om os</a></li>
     </ul>
     <div class="burger">
@@ -17,15 +13,6 @@
   </nav>
 </div>
 <style>
-  .index_img {
-    width: 13%;
-  }
-
-  .menu_img {
-    display: flex;
-    align-items: center;
-    justify-content: space-between;
-  }
   .menu {
     display: none;
     list-style: none;
@@ -38,6 +25,14 @@
     cursor: pointer;
     z-index: 10;
     margin-right: 20px;
+  }
+
+  .nav {
+    background-color: #ebebeb;
+    height: 50px;
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
   }
 
   .burger .line {
@@ -65,7 +60,7 @@
 
   nav.active .menu {
     display: block;
-    background-color: #384222;
+    background-color: #ebebeb;
     position: absolute;
     top: 80px;
     width: 70%;
@@ -80,7 +75,7 @@
   }
 
   nav.active .menu a {
-    color: #f6f5f3;
+    color: #000000;
     text-decoration: none;
     font-size: 1.3rem;
   }
@@ -89,6 +84,7 @@
     nav {
       display: flex;
       justify-content: right;
+      background-color: #ebebeb;
     }
 
     .menu {
@@ -117,7 +113,6 @@
 
     .menu a:hover {
       scale: 1.2;
-      text-decoration: underline;
     }
 
     .burger {
