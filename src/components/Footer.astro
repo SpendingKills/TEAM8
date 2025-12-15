@@ -1,37 +1,43 @@
 <footer>
-  <div class="footer-box_grey">
-    <div class="footer-col">
-      <h3 class="footer_overskrift">Dankort</h3>
-      <div class="kampagner">
-        <img src="/public/pil.svg" alt="" />
-        <h3>om os</h3>
+  <div class="footer-box">
+    <div class="footer-box_grey">
+      <div class="footer-col">
+        <h3 class="footer_overskrift">Dankort</h3>
+        <div class="kampagner">
+          <img src="/pil.svg" alt="" />
+          <h3><a href="/om_os">Om os</a></h3>
+        </div>
+      </div>
+      <div class="footer-col">
+        <h3 class="footer_overskrift">Kampagner</h3>
+        <div class="kampagner">
+          <img src="/pil.svg" alt="" />
+          <h3><a href="/spendingKills">kampagne 1</a></h3>
+        </div>
+        <div class="kampagner">
+          <img src="/pil.svg" alt="" />
+          <h3><a href="/AO">kampagne 2</a></h3>
+        </div>
       </div>
     </div>
-    <div class="footer-col">
-      <h3 class="footer_overskrift">Kampagner</h3>
-      <div class="kampagner">
-        <img src="/public/pil.svg" alt="" />
-        <h3>kampagne 1</h3>
-      </div>
-      <div class="kampagner">
-        <img src="/public/pil.svg" alt="" />
-        <h3>kampagne 2</h3>
-      </div>
-    </div>
-  </div>
 
-  <div class="footer-box_red">
-    <img src="/public/logo.svg" alt="" />
-    <h4 class="footer-slogan">Når vi handler sammen</h4>
+    <div class="footer-box_red">
+      <img src="/logo.svg" alt="" />
+      <h4 class="footer-slogan">Når vi handler sammen</h4>
+    </div>
   </div>
 </footer>
 
 <style>
+  a {
+    text-decoration: none;
+    color: black;
+  }
   .footer-box_grey {
     background: #ebebeb;
     border-radius: 30px;
-    margin: 10px;
-    padding: 20px;
+
+    padding: 10px;
   }
 
   .footer-col {
@@ -53,8 +59,7 @@
   .footer-box_red {
     background: #e21e27;
     border-radius: 30px;
-    margin: 10px;
-    padding: 20px;
+    padding: 10px;
   }
 
   .footer-box_red img {
@@ -69,5 +74,23 @@
 
   .footer-slogan {
     color: white;
+  }
+
+  @media (min-width: 750px) {
+    .footer-box {
+      display: grid;
+      grid-template-columns: 4fr 1fr;
+    }
+
+    .footer-box_grey {
+      display: grid;
+      grid-template-columns: auto auto;
+      align-items: start;
+    }
+
+    .footer-col {
+      margin-top: 3rem;
+      margin-left: 2rem;
+    }
   }
 </style>
