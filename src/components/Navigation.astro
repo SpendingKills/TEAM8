@@ -1,17 +1,19 @@
-<div>
-  <nav class="nav">
-    <ul class="menu">
-      <li><a href="/AO">Kampagne 1</a></li>
-      <li><a href="/spendingKills">Kampagne 2</a></li>
-      <li><a href="/om_os">om os</a></li>
-    </ul>
-    <div class="burger">
-      <div class="line"></div>
-      <div class="line"></div>
-      <div class="line"></div>
-    </div>
-  </nav>
-</div>
+<nav class="nav">
+  <a href="/" class="logo">
+    <img src="/logo.svg" alt="Logo" />
+  </a>
+  <ul class="menu">
+    <li><a href="/spendingKills">Kampagne 1</a></li>
+    <li><a href="/AO">Kampagne 2</a></li>
+    <li><a href="/om_os">om os</a></li>
+  </ul>
+  <div class="burger">
+    <div class="line"></div>
+    <div class="line"></div>
+    <div class="line"></div>
+  </div>
+</nav>
+
 <style>
   .menu {
     display: none;
@@ -31,8 +33,15 @@
     background-color: #ebebeb;
     height: 50px;
     display: flex;
-    justify-content: flex-end;
+    justify-content: space-between;
     align-items: center;
+    padding: 0 20px;
+  }
+
+  .logo img {
+    height: 30px;
+    width: auto;
+    display: block;
   }
 
   .burger .line {
