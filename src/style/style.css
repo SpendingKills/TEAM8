@@ -41,16 +41,24 @@ p {
   margin: 0 auto;
 }
 
+/* SPENDING KILLS SIDEN */
+
 .yellow {
   background-color: #ffd998;
   padding: 20px;
   border-radius: 30px;
+  margin-left: 30px;
+  margin-right: 30px;
 }
 
 .SK_billede1 {
-  width: 88%;
+  width: 83%;
   margin: 0 auto;
   margin-top: 20px;
+}
+.SK_billede2 {
+  display: none;
+  margin: 0 auto;
 }
 
 .SK_intro {
@@ -76,5 +84,29 @@ p {
     font-family: "Raleway", sans-serif;
     font-size: 35px;
     font-weight: 700;
+  }
+
+  /* SPENDING KILLS SIDEN */
+  .SK_billede2 {
+    display: block;
+  }
+
+  .grid_3-5 {
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+    gap: 0;
+    margin-left: 120px;
+    margin-right: 120px;
+  }
+  .SK_billede2 {
+    width: 100%;
+    max-width: 650px;
+    display: block;
+  }
+
+  .SK_intro {
+    margin-left: 120px;
+    margin-bottom: 55px;
+    margin-top: 80px;
   }
 }
