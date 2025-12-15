@@ -10,3 +10,26 @@ img {
   height: auto;
   display: block;
 }
+
+h1 {
+  font-family: "Raleway", sans-serif;
+  font-size: 30px;
+  font-weight: 400;
+}
+
+h2 {
+  font-family: "Raleway", sans-serif;
+  font-size: 20px;
+  font-weight: 800;
+}
+h3 {
+  font-family: "Raleway", sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+}
+
+h4 {
+  font-family: "Raleway", sans-serif;
+  font-size: 25px;
+  font-weight: 700;
+}
