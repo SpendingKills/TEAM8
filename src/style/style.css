@@ -166,6 +166,28 @@ p {
   margin-left: 30px;
   margin-top: 30px;
 }
+/* AOMØDESIDE */
+.video_card2 {
+  position: relative;
+  display: inline-block;
+}
+
+.video_card2 video {
+  display: block;
+  width: 89%;
+  height: auto;
+  margin: 20px;
+  margin-top: 65px;
+  pointer-events: none;
+}
+
+.overlay_video2 {
+  position: absolute;
+  bottom: 77%;
+  left: 14%;
+  display: flex;
+  align-items: center;
+}
 
 /* OM OS SIDEN */
 .oo_billede {
