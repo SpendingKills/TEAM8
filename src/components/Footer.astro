@@ -68,6 +68,7 @@ p{
     margin-left: 15px;
     margin-bottom: 10px;
   }
+
   .kampagner {
     display: flex;
   }
@@ -105,23 +106,52 @@ p{
   }
 
   @media (min-width: 750px) {
+    .footer_overskrift{
+    margin-top: 50px;
+    }
+
     .footer-box {
       display: grid;
-      grid-template-columns: 4fr 1fr;
+      grid-template-columns: 2fr 1fr;
     }
 
     .footer-box_grey {
       display: grid;
       grid-template-columns: auto auto;
       align-items: start;
+      margin-left: 100px;
+      margin-right: 0;
+      margin-top: 120px;
+      margin-bottom: 50px;
     }
 
-    .footer-col {
-      margin-top: 3rem;
-      margin-left: 2rem;
-    }
     .footer-box_red {
-      margin-top: 2rem;
+    background: #e21e27;
+    border-radius: 30px;
+    padding: 10px;
+    margin-bottom: 50px;
+    margin-right: 100px;
+    margin-left: 0;
+    margin-top: 120px;
+  }
+
+    .footer-col {
+      margin-top: 50px;
+      margin-left: 50px;
+      margin-bottom: 50px;
     }
+
+  .footer-box_red img {
+    width: 70px;
+    margin-bottom: 50px;
+    margin-left: 50px;
+    margin-top: 50px;
+  }
+
+    .footer-slogan {
+      margin-left: 50px;
+      margin-bottom: 50px;
+    }
+
   }
 </style>
