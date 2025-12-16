@@ -1,0 +1,23 @@
+---
+export async function getStaticPaths() {
+  const url = "https://qsfcaltfnajjuzgohyzq.supabase.co/rest/v1/forbrug";
+  const key = "sb_publishable_sLgSuSqC-eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFzZmNhbHRmbmFqanV6Z29oeXpxIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU3ODc5OTEsImV4cCI6MjA4MTM2Mzk5MX0.1bO3uOsgOilPmIBOkT5wVxQQaMbNyyUDtXXSTn27imA";
+
+  const options = {
+    headers: {
+      apikey: key,
+    },
+  };
+  const supaRequset = await fetch(url, options);
+  const supaData = await supaRequset.json();
+
+  return supaData.map((forbrug) => {
+    return {
+      params: { slug: forbrug.slug },
+      props: { forbrug },
+    };
+  });
+
+  const { forbrug } = Astro.props;
+}
+---
