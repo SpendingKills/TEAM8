@@ -91,6 +91,19 @@ p {
   display: flex;
   align-items: center;
 }
+
+.tertiary img {
+  width: 20px; /* sæt fast størrelse på pilen */
+  height: 20px;
+}
+
+.overlay_video h4 {
+  font-size: 20px;
+  max-width: 15ch; /* max 20 tegn per linje */
+  line-height: 1.2;
+  word-wrap: break-word;
+}
+
 /* SPENDING KILLS SIDEN */
 
 .yellow {
@@ -264,6 +277,19 @@ p {
 
   .carousel-list li img {
     margin: 0 auto;
+  }
+
+  .grid_1-1-1 {
+    display: grid;
+    grid-template-columns: 1fr 1fr 1fr;
+  }
+
+  .overlay_video h4 {
+    margin-top: -270px;
+    font-size: 45px;
+    max-width: 15ch;
+    line-height: 1.2;
+    word-wrap: break-word;
   }
 }
 
