@@ -2,44 +2,45 @@
 const { variant = "primary" } = Astro.props;
 ---
 
-
 <button class={variant}>
   {(<slot />)}
 </button>
 
 <style>
- button {
+  button {
     background-color: transparent;
     border-radius: 10px;
     padding: 12px 20px;
     cursor: pointer;
   }
 
-.primary{
-background-color: #e21e27;
-color:white;
-border-radius:50px;
-cursor:pointer;
-padding: 10px 40px;
-border:#e21e27
-}
+  .primary {
+    background-color: #e21e27;
+    color: white;
+    border-radius: 50px;
+    cursor: pointer;
+    padding: 10px 30px;
+    border: #e21e27;
+  }
 
-.secondary{
-background-color:white;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-cursor:pointer;
-border:white
-}
+  .secondary {
+    background-color: white;
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    cursor: pointer;
+    border: white;
+  }
 
-.tertiary{
-background-color:#EBEBEB;
-width: 50px;
-height: 50px;
-border-radius: 50%;
-cursor:pointer;
-border:#EBEBEB
-}
-
+  .tertiary {
+    background-color: #ebebeb;
+    border-radius: 50%;
+    cursor: pointer;
+    border: #ebebeb;
+    padding: 7px;
+    display: inline-flex;
+    margin-left: 5px;
+    align-items: center;
+    justify-content: center;
+  }
 </style>
