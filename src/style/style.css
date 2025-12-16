@@ -317,10 +317,10 @@ p {
   }
 }
 
-  /* OM OS SIDEN */
+/* OM OS SIDEN */
 .oo_section {
-display: grid;
-grid-template-columns: 1fr 1fr;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
 }
 
 .oo_h1 {
@@ -337,17 +337,15 @@ grid-template-columns: 1fr 1fr;
   margin-right: 120px;
 }
 
-.oo_p1{
+.oo_p1 {
   margin-left: 0;
   max-width: 500px;
   margin-bottom: 30px;
   margin-right: 150px;
 }
 
-
 .oo_p2 {
   margin-left: 0;
   max-width: 500px;
   margin-right: 150px;
-}
 }
