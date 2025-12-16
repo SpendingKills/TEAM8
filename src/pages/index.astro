@@ -4,8 +4,48 @@ import Button from "../components/Button.astro";
 ---
 
 <PageLayout>
-  <h1><b>Tag kontrollen over dit forbrug</b></h1>
+
+<div class="SK_intro">
+  <h1><b>Forbruger du mere, end du tror?</b></h1>
   <h1>Planlæg, tænk dig om, og invester i det, der virkelig betyder noget.</h1>
-  <h2>Så meget forbruger du?</h2>
+  </div>
+
+  <div class="billede_card">
+  <img src="/notchbillede1.webP" alt="kampagnebillede1">
+    <div class="overlay_content">
+     <h3><b>Kampagne 1</b></h3>     
+     <Button variant="tertiary"><img src="/button-pil.svg" alt=""></Button>
+    </div>
+  </div>
+
+
+  <div class="billede_card">
+    <img src="/notchbillede2.webP" alt="kampagnebillede2">
+ <div class="overlay_content">
+     <h3><b>Kampagne 2</b></h3>
+     <Button variant="tertiary"><img src="/button-pil.svg" alt=""></Button>
+    </div>
+  </div>
+
+  
+  <div class="video_card">
+
+    <div class="overlay_video">
+    <h4><b>Så<br> meget  for-<br>bruger du?</b></h4>
+    </div>
+
+   <video width="100" height="auto" autoplay muted loop playsinline controls>
+  <source src="/FORSIDEVIDEO(1).mp4"type="video/mp4">
+    Din browser understøtter ikke video-tagget.
+</video>
+<div class="overlay_button">
+<Button variant="primary">SE DIT FORBRUG </Button>
+</div>
+</div>
+
+
+
+
   <h4>Hvad for en type er du?</h4>
+
 </PageLayout>
