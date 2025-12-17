@@ -1,27 +1,30 @@
 ---
 import PageLayout from "../layouts/PageLayout.astro";
+import Button from "../components/Button.astro";
 ---
 
 <PageLayout>
   <div class="video_card2">
-
-
-  <div class="overlay_video2">
-    <h1><b>AO mødet</b></h1>
+    <div class="overlay_video2">
+      <h1><b>AO mødet</b></h1>
     </div>
+    <video class="ao_mobile" autoplay muted loop playsinline controls>
+      <source src="/AOMØDEVIDEOSMAL.mp4" type="video/mp4" />
+      Din browser understøtter ikke video-tagget.
+    </video>
 
+    <video class="ao_web" autoplay muted loop playsinline controls>
+      <source src="/AOMØDEVIDEO.mp4" type="video/mp4" />
+      Din browser understøtter ikke video-tagget.
+    </video>
+  </div>
 
+  <div class="overlay_button_ao">
+    <Button variant="primary">SE HELE KAMPAGNEN </Button>
+  </div>
 
-    <video width="100" height="auto" autoplay muted loop playsinline controls>
-  <source src="/AOMØDEVIDEOSMAL.mp4"type="video/mp4">
-    Din browser understøtter ikke video-tagget.
-</video>
-</div>
-
-
-    <h1><b>AO mødet </b></h1>
-
-  <p>Video-kampagnen er udformet med en mere useriøs tone-of-voice og et dynamisk udtryk. Formatet lægger op til at guide brugerne gennem forskellige aspekter af overforbrug. Forud for optagelserne er der udarbejdet idé, manuskript og overordnede rammer for kampagnen med fokus på sammenhæng mellem narrativ og budskab.</p>
+  <div class="ao_text">
+    <h1><b>Forbrug med konsekvenser </b></h1>
+    <p>Video-kampagnen er udformet med en mere useriøs tone-of-voice og et dynamisk udtryk. Formatet lægger op til at guide brugerne gennem forskellige aspekter af overforbrug. Forud for optagelserne er der udarbejdet idé, manuskript og overordnede rammer for kampagnen med fokus på sammenhæng mellem narrativ og budskab.</p>
+  </div>
 </PageLayout>
-
-
