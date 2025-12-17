@@ -1,21 +1,29 @@
 ---
-const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
+import PageLayout from "../layouts/PageLayout.astro";
+export async function getStaticPaths() {
+  const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
+  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkYXdsc2FvZGRmdXdoeWpqY2pmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5NTg1MDksImV4cCI6MjA4MTUzNDUwOX0.lB_NHH7Dy3hCjtvSWVWvLYE5HFJZvsyK0Rs33w6g3ng";
 
-const options = {
-  headers: {
-    apikey: key,
-  },
-};
-const supaRequset = await fetch(url, options);
-const supaData = await supaRequset.json();
-
-return supaData.map((forbrug) => {
-  return {
-    params: { slug: forbrug.slug },
-    props: { forbrug },
+  const options = {
+    headers: {
+      apikey: key,
+    },
   };
-});
+  const supaRequset = await fetch(url, options);
+  const supaData = await supaRequset.json();
+
+  return supaData.map((forbrug) => {
+    return {
+      params: { slug: forbrug.slug },
+      props: { forbrug },
+    };
+  });
+}
 
 const { forbrug } = Astro.props;
-console.log("supaData", supaData);
 ---
+
+<PageLayout>
+  <h1>Få et overblik over dit forbrug</h1>
+  <h3>{forbrug.stk} stykker tøj om året kræver omkring {forbrug.vand} liter vand at producere. Den mængde vand svarer til mere end {forbrug.badekar} fyldte badekar</h3>
+</PageLayout>
