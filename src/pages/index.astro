@@ -54,17 +54,19 @@ const supaData = await supaRequset.json();
         Din browser understøtter ikke video-tagget.
       </video>
       <div class="overlay_button">
-        <Button variant="primary">SE DIT FORBRUG </Button>
+        <a href="#cards">
+          <Button variant="primary">SE DIT FORBRUG </Button>
+        </a>
       </div>
-    </div>
 
-    <h4 class="SK_intro">Hvad for en type er du?</h4>
-    <section class="grid_1-1-1_index">
-      {
-        supaData.map((forbrug, i) => {
-          return <Card variant="type-knap" data={forbrug} />;
-        })
-      }
-    </section>
+      <h4 class="SK_intro">Hvad for en type er du?</h4>
+      <section id="cards" class="grid_1-1-1_index">
+        {
+          supaData.map((forbrug, i) => {
+            return <Card variant="type-knap" data={forbrug} />;
+          })
+        }
+      </section>
+    </div>
   </div>
 </PageLayout>

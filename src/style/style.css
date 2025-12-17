@@ -82,7 +82,7 @@ p {
 
 .overlay_video {
   position: absolute;
-  bottom: 60%;
+  bottom: 83%;
   left: 6%;
   display: flex;
   align-items: center;
@@ -90,7 +90,7 @@ p {
 
 .overlay_button {
   position: absolute;
-  bottom: 11%;
+  bottom: 65%;
   left: 52%;
   display: flex;
   align-items: center;
@@ -431,7 +431,7 @@ p {
 
   .overlay_button {
     left: 80%;
-    bottom: 10%;
+    bottom: 35%;
     transform: translateX(-50%);
   }
 
@@ -446,6 +446,11 @@ p {
     max-width: 15ch;
     line-height: 1.2;
     word-wrap: break-word;
+  }
+
+  .overlay_video {
+    bottom: 70%;
+    left: 5%;
   }
 
   /* OM OS SIDEN */
@@ -479,11 +484,8 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
   }
   .overlay_button_ao {
-    position: absolute;
     bottom: 0%;
     left: 85%;
-    display: flex;
-    align-items: center;
   }
 
   .overlay_video2 {
