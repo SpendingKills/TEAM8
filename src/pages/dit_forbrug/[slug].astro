@@ -26,9 +26,16 @@ const { forbrug } = Astro.props;
 
 <PageLayout>
   <h1 class="SK_intro"><b>Få et overblik over dit forbrug </b></h1>
-  <img class="SK_billede1" src="/sk2.webP" alt="billede med pakke" />
-  <h3 class="yellow"><b>{forbrug.stk} stykker tøj </b> om året kræver omkring <b>{forbrug.vand} liter vand </b> at producere. Den mængde vand svarer til mere end {forbrug.badekar} fyldte badekar</h3>
-  <h3 class="SK_intro">Modeindustrien står for det næststørste forbrug af vand i verden og er ansvarlig for 8-10 % af de globale CO2-udledninger. <br /> <p><b>*svanemærket</b></p></h3>
+  <div class="grid_5-2">
+    <img class="SK_billede1-forbrug" src="/forbrug_billede.webP" alt="billede med pakke" />
+    <div class="yellow-forbrug">
+      <h3><b>{forbrug.stk} stykker tøj </b> om året kræver omkring <b>{forbrug.vand} liter vand </b> at producere.</h3>
+      <br />
+      <h3>Den mængde vand svarer til mere end {forbrug.badekar} fyldte badekar</h3>
+    </div>
+  </div>
+  <h3 class="SK_intro">Modeindustrien står for det næststørste forbrug af vand i verden og er ansvarlig for 8-10 % af de globale CO2-udledninger.</h3>
+  <p class="svanemaerke"><b>*svanemærket</b></p>
   <h2 class="SK_intro"><b>Hvad kan du gøre?</b></h2>
 
   <div class="grid_cardsection">
