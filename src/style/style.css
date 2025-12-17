@@ -96,6 +96,14 @@ p {
   align-items: center;
 }
 
+.overlay_button_ao {
+  position: absolute;
+  bottom: 0%;
+  left: 50%;
+  display: flex;
+  align-items: center;
+}
+
 .tertiary img {
   width: 20px;
   height: 20px;
@@ -214,17 +222,29 @@ p {
   display: block;
   width: 89%;
   height: auto;
-  margin: 20px;
-  margin-top: 65px;
+  margin: 0 auto;
+  margin-top: 10px;
   pointer-events: none;
 }
 
 .overlay_video2 {
   position: absolute;
-  bottom: 77%;
+  bottom: 85%;
   left: 14%;
   display: flex;
   align-items: center;
+}
+
+.ao_text h1 {
+  margin-left: 55px;
+}
+
+.ao_text p {
+  line-height: 1.2;
+}
+
+.ao_web {
+  display: none !important;
 }
 
 /* OM OS SIDEN */
@@ -363,6 +383,12 @@ p {
     bottom: 10%;
     transform: translateX(-50%);
   }
+
+  .overlay_button_ao {
+    bottom: 10%;
+    left: 80%;
+    transform: translateX(-50%);
+  }
   .overlay_video h4 {
     margin-top: -270px;
     font-size: 45px;
@@ -375,5 +401,24 @@ p {
   .oo_section {
     grid-template-columns: minmax(300px, 1fr) 1.2fr;
     align-items: center;
+  }
+
+  .ao_mobile {
+    display: none !important;
+  }
+
+  .ao_web {
+    display: block !important;
+  }
+
+  .ao_text p {
+    margin: 0;
+    max-width: 100ch;
+    margin-left: 100px;
+  }
+
+  .ao_text h1 {
+    margin-left: 100px;
+    padding-top: 20px;
   }
 }
