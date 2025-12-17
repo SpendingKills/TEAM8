@@ -1,4 +1,5 @@
 ---
+import Cardsection from "../../components/Cardsection.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
 export async function getStaticPaths() {
   const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
@@ -24,7 +25,16 @@ const { forbrug } = Astro.props;
 ---
 
 <PageLayout>
-  <h1>Få et overblik over dit forbrug</h1>
-  <img src="/sk2.webP" alt="billede med pakke" />
-  <h3>{forbrug.stk} stykker tøj om året kræver omkring {forbrug.vand} liter vand at producere. Den mængde vand svarer til mere end {forbrug.badekar} fyldte badekar</h3>
+  <h1 class="SK_intro"><b>Få et overblik over dit forbrug </b></h1>
+  <img class="SK_billede1" src="/sk2.webP" alt="billede med pakke" />
+  <h3 class="yellow"><b>{forbrug.stk} stykker tøj </b> om året kræver omkring <b>{forbrug.vand} liter vand </b> at producere. Den mængde vand svarer til mere end {forbrug.badekar} fyldte badekar</h3>
+  <h3 class="SK_intro">Modeindustrien står for det næststørste forbrug af vand i verden og er ansvarlig for 8-10 % af de globale CO2-udledninger. <br /> <p><b>*svanemærket</b></p></h3>
+  <h2 class="SK_intro"><b>Hvad kan du gøre?</b></h2>
+
+  <div class="grid_cardsection">
+    <Cardsection variant="card-red" number="(01)" text="Lej,lån eller byt tøj i stedet for at købe nyt." />
+    <Cardsection variant="card-yellow" number="(02)" text="Reparer og genbrug tøj for at forlænge levetiden." />
+    <Cardsection variant="card-img" number="(03)" text="Vælg genbrugstøj, når det er muligt." />
+    <Cardsection variant="card-blue" number="(04)" text="Køb kvalitet frem for kvantitet." />
+  </div>
 </PageLayout>
