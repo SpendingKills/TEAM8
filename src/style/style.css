@@ -436,7 +436,7 @@ p {
   }
 
   .overlay_button_ao {
-    bottom: 30%;
+    bottom: 35%;
     left: 80%;
     transform: translateX(-50%);
   }
@@ -478,10 +478,15 @@ p {
   .grid_1-1-1 {
     grid-template-columns: 1fr 1fr 1fr;
   }
-
   .overlay_button_ao {
-    bottom: -5%;
+    position: absolute;
+    bottom: 0%;
     left: 85%;
-    transform: translateX(-50%);
+    display: flex;
+    align-items: center;
+  }
+
+  .overlay_video2 {
+    bottom: 80%;
   }
 }
