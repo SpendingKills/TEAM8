@@ -104,6 +104,11 @@ p {
   word-wrap: break-word;
 }
 
+.flex_knap {
+  display: flex;
+  flex-direction: row;
+  margin-top: 5px;
+}
 /* SPENDING KILLS SIDEN */
 
 .yellow {

@@ -1,10 +1,31 @@
 ---
 import Button from "../components/Button.astro";
-const { data } = Astro.props;
+const { variant, data } = Astro.props;
 ---
 
-<article>
-  <h3>{data.slug}</h3>
+<article class={variant} >
+  <h3><b>Type {data.type}</b></h3>
+  <div class="flex_knap">
   <p>Jeg køber {data.stk} stykker tøj om måneden</p>
-  <Button variant="secondary"><img src="/button-pil.svg" alt="" /></Button>
+  <a href=`/dit_forbrug/${data.slug}`>  <Button variant="secondary"><img src="/button-pil.svg" alt="" /></Button>
+    </div>
+</a>
 </article>
+
+
+<style>
+.type-knap{
+background-color: #FFD998;
+border-radius: 30px;
+margin: 20px;
+padding: 20px;
+
+}
+
+
+</style>
+
+
+
+
+
