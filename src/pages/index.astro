@@ -4,15 +4,15 @@ import Button from "../components/Button.astro";
 import Card from "../components/Card.astro";
 
 const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
-  const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkYXdsc2FvZGRmdXdoeWpqY2pmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5NTg1MDksImV4cCI6MjA4MTUzNDUwOX0.lB_NHH7Dy3hCjtvSWVWvLYE5HFJZvsyK0Rs33w6g3ng";
+const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkYXdsc2FvZGRmdXdoeWpqY2pmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5NTg1MDksImV4cCI6MjA4MTUzNDUwOX0.lB_NHH7Dy3hCjtvSWVWvLYE5HFJZvsyK0Rs33w6g3ng";
 
-  const options = {
-    headers: {
-      apikey: key,
-    },
-  };
-  const supaRequset = await fetch(url, options);
-  const supaData = await supaRequset.json();
+const options = {
+  headers: {
+    apikey: key,
+  },
+};
+const supaRequset = await fetch(url, options);
+const supaData = await supaRequset.json();
 ---
 
 <PageLayout>
@@ -45,10 +45,6 @@ const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
         <h4><b>Så meget forbruger du?</b></h4>
       </div>
 
-      <!-- <div class="video_card_web">
-        <h4><b>Så meget for bruger du?</b></h4>
-      </div> -->
-
       <video width=" 100" height="auto" autoplay muted loop playsinline controls>
         <source src="/FORSIDEVIDEO(1).mp4" type="video/mp4" />
         Din browser understøtter ikke video-tagget.
@@ -61,10 +57,9 @@ const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
     <h4 class="SK_intro">Hvad for en type er du?</h4>
 
     {
-supaData.map((forbrug, i) =>{
-  return <Card variant="type-knap" data={forbrug}/>;
-    })
-  }
-  
+      supaData.map((forbrug, i) => {
+        return <Card variant="type-knap" data={forbrug} />;
+      })
+    }
   </div>
 </PageLayout>
