@@ -398,7 +398,7 @@ p {
 
   .grid_1-1-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .grid_1-1-1_index {
@@ -426,5 +426,11 @@ p {
   .oo_section {
     grid-template-columns: minmax(300px, 1fr) 1.2fr;
     align-items: center;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
