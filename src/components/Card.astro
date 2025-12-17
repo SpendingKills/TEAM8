@@ -1,8 +1,10 @@
 ---
+import Button from "../components/Button.astro";
 const { data } = Astro.props;
 ---
 
 <article>
   <h3>{data.slug}</h3>
   <p>Jeg køber {data.stk} stykker tøj om måneden</p>
+  <Button variant="secondary"><img src="/button-pil.svg" alt="" /></Button>
 </article>
