@@ -55,11 +55,12 @@ const supaData = await supaRequset.json();
     </div>
 
     <h4 class="SK_intro">Hvad for en type er du?</h4>
-
-    {
-      supaData.map((forbrug, i) => {
-        return <Card variant="type-knap" data={forbrug} />;
-      })
-    }
+    <section class="grid_1-1-1_index">
+      {
+        supaData.map((forbrug, i) => {
+          return <Card variant="type-knap" data={forbrug} />;
+        })
+      }
+    </section>
   </div>
 </PageLayout>
