@@ -97,21 +97,30 @@ p {
 }
 
 .tertiary img {
-  width: 20px; /* sæt fast størrelse på pilen */
+  width: 20px;
   height: 20px;
+}
+
+.secondary img {
+  width: 30px;
+  height: 30px;
 }
 
 .overlay_video h4 {
   font-size: 20px;
-  max-width: 15ch; /* max 20 tegn per linje */
+  max-width: 15ch;
   line-height: 1.2;
   word-wrap: break-word;
 }
 
 .flex_knap {
   display: flex;
-  flex-direction: row;
-  margin-top: 5px;
+  justify-content: space-between;
+  gap: 12px;
+}
+
+.flex_knap p {
+  margin: 0;
 }
 
 .grid_cardsection {
@@ -341,6 +350,19 @@ p {
     grid-template-columns: 1fr 1fr 1fr;
   }
 
+  .grid_1-1-1_index {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    max-width: 1200px;
+    margin: 0 auto;
+    gap: 24px;
+  }
+
+  .overlay_button {
+    left: 80%;
+    bottom: 10%;
+    transform: translateX(-50%);
+  }
   .overlay_video h4 {
     margin-top: -270px;
     font-size: 45px;
