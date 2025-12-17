@@ -418,7 +418,7 @@ p {
 
   .grid_1-1-1 {
     display: grid;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 1fr 1fr;
   }
 
   .grid_1-1-1_index {
@@ -471,5 +471,11 @@ p {
   .ao_text h1 {
     margin-left: 100px;
     padding-top: 20px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .grid_1-1-1 {
+    grid-template-columns: 1fr 1fr 1fr;
   }
 }
