@@ -251,6 +251,11 @@ p {
   display: none !important;
 }
 
+.knap_forbrugside {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+}
 /* OM OS SIDEN */
 
 .oo_section {
