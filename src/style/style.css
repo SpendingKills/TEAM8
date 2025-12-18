@@ -288,6 +288,12 @@ p {
 }
 /* FORBRUG SIDEN */
 
+.knap_forbrugside {
+  display: flex;
+  justify-content: center;
+  margin-top: 3rem;
+}
+
 .yellow-forbrug {
   background-color: #ffd998;
   padding: 20px;
@@ -363,7 +369,7 @@ p {
   }
 
   /* SPENDING KILLS SIDEN */
-.grid_3-5 {
+  .grid_3-5 {
     grid-template-columns: minmax(320px, 1fr) minmax(0, 1.4fr); /*VI SKAL HUSKE DETTE FOR AT GØRE DET RESPONSIVT*/
     max-width: 1200px;
     margin: 0 auto;
@@ -386,9 +392,9 @@ p {
     margin-top: 80px;
   }
 
-  .SK_type{
+  .SK_type {
     margin-bottom: 50px;
-    margin-top: 100px; 
+    margin-top: 100px;
   }
 
   .galleri_tekst {
