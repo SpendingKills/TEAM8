@@ -1,6 +1,7 @@
 ---
 import Cardsection from "../../components/Cardsection.astro";
 import PageLayout from "../../layouts/PageLayout.astro";
+import Button from "../../components/Button.astro";
 export async function getStaticPaths() {
   const url = "https://gdawlsaoddfuwhyjjcjf.supabase.co/rest/v1/forbrug";
   const key = "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImdkYXdsc2FvZGRmdXdoeWpqY2pmIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjU5NTg1MDksImV4cCI6MjA4MTUzNDUwOX0.lB_NHH7Dy3hCjtvSWVWvLYE5HFJZvsyK0Rs33w6g3ng";
@@ -43,5 +44,8 @@ const { forbrug } = Astro.props;
     <Cardsection variant="card-yellow" number="(02)" text="Reparer og genbrug tøj for at forlænge levetiden." />
     <Cardsection variant="card-img" number="(03)" text="Vælg genbrugstøj, når det er muligt." />
     <Cardsection variant="card-blue" number="(04)" text="Køb kvalitet frem for kvantitet." />
+  </div>
+  <div class="knap_forbrugside">
+    <Button variant="primary">TILBAGE TIL FORSIDEN </Button>
   </div>
 </PageLayout>
