@@ -5,7 +5,7 @@
   <ul class="menu">
     <li><a href="/spending_kills">Kampagne 1</a></li>
     <li><a href="/AO">Kampagne 2</a></li>
-    <li><a href="/om_os">om os</a></li>
+    <li><a href="/om_os">Om os</a></li>
   </ul>
   <div class="burger">
     <div class="line"></div>
@@ -31,7 +31,7 @@
 
   .nav {
     background-color: #ebebeb;
-    height: 50px;
+    height: 80px;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -90,38 +90,34 @@
   }
 
   @media screen and (min-width: 800px) {
+    .logo img {
+    height: 41px;
+    width: auto;
+    display: block;
+    margin-left: 120px;
+  }
+
     nav {
-      display: flex;
       justify-content: right;
-      background-color: #ebebeb;
     }
 
     .menu {
       display: flex;
       list-style: none;
-      margin: 0;
       padding: 0;
-      gap: 50px;
-    }
-
-    .menu li {
-      margin: 0 30px;
+      gap: 70px;
+      margin-right: 120px;
     }
 
     .menu a {
-      font-size: 1.2rem;
-      display: block;
-      text-align: center;
-      padding: 7px 0;
+      display: inline-block;
+      font-size: 16px;
       color: #000000;
       text-decoration: none;
-      transition:
-        color 0.3s,
-        background-color 0.3s;
     }
 
     .menu a:hover {
-      scale: 1.2;
+   transform: scale(1.2);
     }
 
     .burger {
